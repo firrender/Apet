@@ -5,7 +5,7 @@ import androidx.annotation.DrawableRes
 data class PetBean(
     val id: String,
     val title: String,
-    val subtitle: String? = null,
+    val detail: String,
     val name: String,
     val age: Int,
     val sex: String,

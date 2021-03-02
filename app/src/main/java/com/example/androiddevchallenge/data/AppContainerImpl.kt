@@ -1,6 +1,3 @@
-package com.example.jetnews.data
-
-import PetsRepository
 import android.content.Context
 import com.example.androiddevchallenge.data.pets.impl.FakePetsRepository
 

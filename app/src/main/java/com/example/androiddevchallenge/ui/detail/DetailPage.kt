@@ -1,6 +1,6 @@
 package com.example.androiddevchallenge.ui.detail
 
-import PetsRepository
+import com.example.androiddevchallenge.data.pets.PetsRepository
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.fillMaxWidth

@@ -1,7 +1,7 @@
 package com.example.androiddevchallenge.ui
 
-import AppContainer
-import PetsRepository
+import com.example.androiddevchallenge.data.AppContainer
+import com.example.androiddevchallenge.data.pets.PetsRepository
 import androidx.compose.animation.Crossfade
 import androidx.compose.runtime.Composable
 import com.example.androiddevchallenge.ui.detail.DetailPage

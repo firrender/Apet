@@ -1,3 +1,5 @@
+package com.example.androiddevchallenge.data.pets
+
 import com.example.androiddevchallenge.model.BaseBean
 import com.example.androiddevchallenge.model.PetBean
 

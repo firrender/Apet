@@ -1,7 +1,7 @@
 package com.example.androiddevchallenge
 
-import AppContainer
-import AppContainerImpl
+import com.example.androiddevchallenge.data.AppContainer
+import com.example.androiddevchallenge.data.AppContainerImpl
 import android.app.Application
 
 class ApetApplication : Application() {

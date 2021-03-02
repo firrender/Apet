@@ -1,6 +1,6 @@
 package com.example.androiddevchallenge.ui.home
 
-import PetsRepository
+import com.example.androiddevchallenge.data.pets.PetsRepository
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box

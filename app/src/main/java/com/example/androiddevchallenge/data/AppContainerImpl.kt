@@ -1,4 +1,7 @@
+package com.example.androiddevchallenge.data
+
 import android.content.Context
+import com.example.androiddevchallenge.data.pets.PetsRepository
 import com.example.androiddevchallenge.data.pets.impl.FakePetsRepository
 
 interface AppContainer {

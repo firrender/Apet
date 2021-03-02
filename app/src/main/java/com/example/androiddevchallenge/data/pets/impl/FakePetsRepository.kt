@@ -1,6 +1,6 @@
 package com.example.androiddevchallenge.data.pets.impl
 
-import PetsRepository
+import com.example.androiddevchallenge.data.pets.PetsRepository
 import android.content.res.Resources
 import com.example.androiddevchallenge.data.pets.pets
 import com.example.androiddevchallenge.model.BaseBean

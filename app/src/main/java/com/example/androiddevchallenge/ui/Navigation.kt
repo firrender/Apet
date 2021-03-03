@@ -48,7 +48,6 @@ private fun Bundle.toScreen(): Screen {
     val screenName = ScreenName.valueOf(getStringOrThrow(SIS_NAME))
     return when (screenName) {
         ScreenName.HOME -> Screen.Home
-        //INTERESTS -> Interests
         ScreenName.DETAIL -> {
             val postId = getStringOrThrow(SIS_POST)
             Screen.Detail(postId)
@@ -69,7 +68,7 @@ class NavigationViewModel(savedStateHandle: SavedStateHandle) : ViewModel() {
         restore = { it.toScreen() }
     )
 
-    private set // limit the writes to only inside this class.
+        private set // limit the writes to only inside this class.
 
     @MainThread
     fun onBack(): Boolean {

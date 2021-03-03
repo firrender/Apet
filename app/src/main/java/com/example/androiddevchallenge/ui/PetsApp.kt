@@ -15,10 +15,10 @@
  */
 package com.example.androiddevchallenge.ui
 
-import com.example.androiddevchallenge.data.AppContainer
-import com.example.androiddevchallenge.data.pets.PetsRepository
 import androidx.compose.animation.Crossfade
 import androidx.compose.runtime.Composable
+import com.example.androiddevchallenge.data.AppContainer
+import com.example.androiddevchallenge.data.pets.PetsRepository
 import com.example.androiddevchallenge.ui.detail.DetailPage
 import com.example.androiddevchallenge.ui.home.HomePage
 import com.example.androiddevchallenge.ui.theme.PetTheme

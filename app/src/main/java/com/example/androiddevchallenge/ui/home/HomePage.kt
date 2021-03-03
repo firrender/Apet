@@ -133,7 +133,8 @@ private fun BannerSection(pet: PetBean, navigateTo: (Screen) -> Unit) {
 @Composable
 fun BannerView(pet: PetBean, modifier: Modifier = Modifier) {
     Box(
-        modifier = modifier.fillMaxWidth().padding(16.dp)) {
+        modifier = modifier.fillMaxWidth().padding(16.dp)
+    ) {
         val imageModifier = Modifier
             .height(130.dp)
             .fillMaxWidth()

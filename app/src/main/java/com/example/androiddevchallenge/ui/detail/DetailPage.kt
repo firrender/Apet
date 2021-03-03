@@ -63,7 +63,7 @@ import com.example.androiddevchallenge.model.BaseBean
 import com.example.androiddevchallenge.model.PetBean
 import com.example.androiddevchallenge.ui.theme.Black
 import com.example.androiddevchallenge.ui.theme.White
-import com.example.androiddevchallenge.ui.theme.primary
+import com.example.androiddevchallenge.ui.theme.Prima
 import kotlinx.coroutines.runBlocking
 
 @Composable
@@ -114,7 +114,7 @@ fun DetailPage(
                     }
                 },
                 modifier = Modifier.fillMaxWidth(),
-                backgroundColor = primary
+                backgroundColor = Prima
             )
         },
         content = { innerPadding ->

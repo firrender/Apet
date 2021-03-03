@@ -15,7 +15,6 @@
  */
 package com.example.androiddevchallenge.ui.home
 
-import com.example.androiddevchallenge.data.pets.PetsRepository
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -45,13 +44,14 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.androiddevchallenge.data.pets.impl.BlockingFakePetsRepository
+import com.example.androiddevchallenge.data.pets.PetsRepository
 import com.example.androiddevchallenge.model.BaseBean
 import com.example.androiddevchallenge.model.PetBean
 import com.example.androiddevchallenge.ui.Screen
 import com.example.androiddevchallenge.ui.ThemedPreview
 import com.example.androiddevchallenge.ui.compoment.VerticalGrid
 import com.example.androiddevchallenge.ui.theme.White
-import com.example.androiddevchallenge.ui.theme.primary
+import com.example.androiddevchallenge.ui.theme.Prima
 import kotlinx.coroutines.runBlocking
 
 @Composable
@@ -81,7 +81,7 @@ fun HomePage(
                     modifier = Modifier.fillMaxWidth()
                 ) },
             modifier = Modifier.fillMaxWidth(),
-            backgroundColor = primary
+            backgroundColor = Prima
         )
     },content = {
         Surface() {
@@ -122,10 +122,6 @@ private fun BannerSection(pet: PetBean, navigateTo: (Screen) -> Unit) {
             navigateTo(Screen.Detail(pet.id))
         })
     )
-    /*Divider(
-        modifier = Modifier.padding(horizontal = 14.dp),
-        color = MaterialTheme.colors.onSurface.copy(alpha = 0.08f)
-    )*/
 }
 
 @Composable
@@ -177,7 +173,7 @@ private fun PetListView(
         modifier = Modifier.padding(16.dp),
         text = "Popular Recommend",
         style = MaterialTheme.typography.h5,
-        color = primary
+        color = Prima
     )
     VerticalGrid(modifier = Modifier.padding(horizontal = 16.dp)) {
         pets.forEach { pet -> PetCardItem(pet, navigateTo, Modifier.padding(10.dp)) }

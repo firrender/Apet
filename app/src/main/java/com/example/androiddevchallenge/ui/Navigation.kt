@@ -24,7 +24,6 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import com.example.androiddevchallenge.utils.getMutableStateOf
 
-
 enum class ScreenName { HOME, DETAIL }
 
 sealed class Screen(val id: ScreenName) {
@@ -32,11 +31,9 @@ sealed class Screen(val id: ScreenName) {
     data class Detail(val petId: String) : Screen(ScreenName.DETAIL)
 }
 
-
 private const val SIS_SCREEN = "sis_screen"
 private const val SIS_NAME = "screen_name"
 private const val SIS_POST = "post"
-
 
 private fun Screen.toBundle(): Bundle {
     return bundleOf(SIS_NAME to id.name).also {
@@ -60,7 +57,6 @@ private fun Bundle.toScreen(): Screen {
     }
 }
 
-
 private fun Bundle.getStringOrThrow(key: String) =
     requireNotNull(getString(key)) { "Missing key '$key' in $this" }
 
@@ -72,7 +68,8 @@ class NavigationViewModel(savedStateHandle: SavedStateHandle) : ViewModel() {
         save = { it.toBundle() },
         restore = { it.toScreen() }
     )
-        private set // limit the writes to only inside this class.
+
+    private set // limit the writes to only inside this class.
 
     @MainThread
     fun onBack(): Boolean {

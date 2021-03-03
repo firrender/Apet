@@ -40,6 +40,4 @@ class MainActivity : AppCompatActivity() {
         if (!navigationViewModel.onBack())
             super.onBackPressed()
     }
-
 }
-

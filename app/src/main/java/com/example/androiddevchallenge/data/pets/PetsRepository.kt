@@ -23,5 +23,4 @@ interface PetsRepository {
     suspend fun getPets(petId: String): BaseBean<PetBean>
 
     suspend fun getPets(): BaseBean<List<PetBean>>
-
 }

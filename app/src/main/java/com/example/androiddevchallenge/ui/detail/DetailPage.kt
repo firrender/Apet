@@ -57,7 +57,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.androiddevchallenge.R
-import com.example.androiddevchallenge.data.pets.PetsRepository
 import com.example.androiddevchallenge.data.pets.impl.BlockingFakePetsRepository
 import com.example.androiddevchallenge.model.BaseBean
 import com.example.androiddevchallenge.model.PetBean
@@ -69,7 +68,6 @@ import kotlinx.coroutines.runBlocking
 @Composable
 fun DetailPage(
     petId: String,
-    petsRepository: PetsRepository,
     onBack: () -> Unit
 ) {
     DetailPage(
@@ -123,7 +121,6 @@ fun DetailPage(
         },
         bottomBar = {
             BottomBar(
-                pet = pet,
                 onUnimplementedAction = { showDialog = true },
             )
         }
@@ -172,7 +169,6 @@ fun PetContent(pet: PetBean, modifier: Modifier = Modifier) {
 
 @Composable
 private fun BottomBar(
-    pet: PetBean,
     onUnimplementedAction: () -> Unit,
 ) {
     Surface(elevation = 4.dp) {
@@ -225,8 +221,7 @@ private fun FunctionalityNotAvailablePopup(onDismiss: () -> Unit) {
 @Composable
 private fun loadFakePet(petId: String): PetBean {
     val context = LocalContext.current
-    val pet = runBlocking {
+    return runBlocking {
         (BlockingFakePetsRepository(context).getPets(petId) as BaseBean.Success).data
     }
-    return pet
 }

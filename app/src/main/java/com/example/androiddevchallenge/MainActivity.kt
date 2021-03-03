@@ -29,10 +29,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val appContainer = (application as ApetApplication).container
-
         setContent {
-            PetsApp(appContainer, navigationViewModel)
+            PetsApp(navigationViewModel)
         }
     }
 

@@ -52,7 +52,6 @@ private fun Bundle.toScreen(): Screen {
             val postId = getStringOrThrow(SIS_POST)
             Screen.Detail(postId)
         }
-        else -> Screen.Home
     }
 }
 

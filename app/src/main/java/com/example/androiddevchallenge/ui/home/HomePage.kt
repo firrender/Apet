@@ -43,7 +43,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.androiddevchallenge.data.pets.PetsRepository
 import com.example.androiddevchallenge.data.pets.impl.BlockingFakePetsRepository
 import com.example.androiddevchallenge.model.BaseBean
 import com.example.androiddevchallenge.model.PetBean
@@ -57,7 +56,6 @@ import kotlinx.coroutines.runBlocking
 @Composable
 fun HomePage(
     navigateTo: (Screen) -> Unit,
-    petsRepository: PetsRepository,
 ) {
     HomePage(
         pets = loadFakePets(),
@@ -87,7 +85,7 @@ fun HomePage(
             )
         },
         content = {
-            Surface() {
+            Surface {
                 PetList(pets, navigateTo)
             }
         }

@@ -29,4 +29,5 @@ data class PetBean(
     val like: String,
     @DrawableRes val imagePetId: Int,
     @DrawableRes val imageUserId: Int
+
 )

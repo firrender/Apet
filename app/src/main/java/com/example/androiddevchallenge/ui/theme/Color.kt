@@ -17,6 +17,6 @@ package com.example.androiddevchallenge.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val White = Color(0xFFFFFFFF)
 val Black = Color(0xFF000000)
 val Prima = Color(0xFF37C8AF)
+val White = Color(0xFFFFFFFF)

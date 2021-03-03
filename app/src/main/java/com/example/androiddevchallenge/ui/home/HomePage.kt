@@ -70,24 +70,28 @@ fun HomePage(
     pets: List<PetBean>,
     navigateTo: (Screen) -> Unit,
 ) {
-    Scaffold(topBar = {
-        TopAppBar(
-            title = {
-                Text(
-                    text = "A pet waiting for you!",
-                    color = White,
-                    style = MaterialTheme.typography.h5,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.fillMaxWidth()
-                ) },
-            modifier = Modifier.fillMaxWidth(),
-            backgroundColor = Prima
-        )
-    },content = {
-        Surface() {
-            PetList(pets, navigateTo)
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(
+                        text = "A pet waiting for you!",
+                        color = White,
+                        style = MaterialTheme.typography.h5,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                },
+                modifier = Modifier.fillMaxWidth(),
+                backgroundColor = Prima
+            )
+        },
+        content = {
+            Surface() {
+                PetList(pets, navigateTo)
+            }
         }
-    })
+    )
 }
 
 @Composable
@@ -118,21 +122,21 @@ private fun PetList(
 private fun BannerSection(pet: PetBean, navigateTo: (Screen) -> Unit) {
     BannerView(
         pet = pet,
-        modifier = Modifier.clickable(onClick = {
-            navigateTo(Screen.Detail(pet.id))
-        })
+        modifier = Modifier.clickable(
+            onClick = {
+                navigateTo(Screen.Detail(pet.id))
+            }
+        )
     )
 }
 
 @Composable
 fun BannerView(pet: PetBean, modifier: Modifier = Modifier) {
-    Box(modifier = modifier
-        .fillMaxWidth()
-        .padding(16.dp)) {
+    Box(
+        modifier = modifier.fillMaxWidth().padding(16.dp)) {
         val imageModifier = Modifier
             .height(130.dp)
             .fillMaxWidth()
-            //.clip(shape = MaterialTheme.shapes.medium)
             .clip(shape = RoundedCornerShape(16.dp).copy(topStart = ZeroCornerSize, topEnd = ZeroCornerSize))
         Image(
             painter = painterResource(pet.imagePetId),
@@ -193,20 +197,22 @@ fun PetCardItem(
             .height(200.dp)
     ) {
 
-        Column(modifier = Modifier.clickable(
-            onClick = {
-                navigateTo(Screen.Detail(pet.id))
-            }
-        )) {
-
+        Column(
+            modifier = Modifier.clickable(
+                onClick = {
+                    navigateTo(Screen.Detail(pet.id))
+                }
+            )
+        ) {
             Image(
                 painter = painterResource(pet.imagePetId),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.height(120.dp).fillMaxWidth()
             )
-
-            Column(modifier = Modifier.padding(8.dp)) {
+            Column(
+                modifier = Modifier.padding(8.dp)
+            ) {
                 Text(
                     text = pet.title,
                     style = MaterialTheme.typography.h6,
@@ -229,6 +235,6 @@ fun PetCardItem(
 fun PreviewHomeScreenBody() {
     ThemedPreview {
         val pets = loadFakePets()
-        PetList(pets, { })
+        PetList(pets, {})
     }
 }

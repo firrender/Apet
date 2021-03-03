@@ -57,13 +57,13 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.androiddevchallenge.R
-import com.example.androiddevchallenge.data.pets.impl.BlockingFakePetsRepository
 import com.example.androiddevchallenge.data.pets.PetsRepository
+import com.example.androiddevchallenge.data.pets.impl.BlockingFakePetsRepository
 import com.example.androiddevchallenge.model.BaseBean
 import com.example.androiddevchallenge.model.PetBean
 import com.example.androiddevchallenge.ui.theme.Black
-import com.example.androiddevchallenge.ui.theme.White
 import com.example.androiddevchallenge.ui.theme.Prima
+import com.example.androiddevchallenge.ui.theme.White
 import kotlinx.coroutines.runBlocking
 
 @Composable

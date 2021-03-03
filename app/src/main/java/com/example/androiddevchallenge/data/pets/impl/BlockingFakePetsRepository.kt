@@ -15,16 +15,14 @@
  */
 package com.example.androiddevchallenge.data.pets.impl
 
-import com.example.androiddevchallenge.data.pets.PetsRepository
 import android.content.Context
+import com.example.androiddevchallenge.data.pets.PetsRepository
 import com.example.androiddevchallenge.data.pets.pets
 import com.example.androiddevchallenge.model.BaseBean
 import com.example.androiddevchallenge.model.PetBean
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.withContext
 
-@OptIn(ExperimentalCoroutinesApi::class)
 class BlockingFakePetsRepository(private val context: Context) : PetsRepository {
 
     override suspend fun getPets(petId: String): BaseBean<PetBean> {

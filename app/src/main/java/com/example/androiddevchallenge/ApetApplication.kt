@@ -15,9 +15,9 @@
  */
 package com.example.androiddevchallenge
 
+import android.app.Application
 import com.example.androiddevchallenge.data.AppContainer
 import com.example.androiddevchallenge.data.AppContainerImpl
-import android.app.Application
 
 class ApetApplication : Application() {
 

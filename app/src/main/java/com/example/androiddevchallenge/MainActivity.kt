@@ -37,9 +37,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        if (!navigationViewModel.onBack()) {
+        if (!navigationViewModel.onBack())
             super.onBackPressed()
-        }
     }
+
 }
 
